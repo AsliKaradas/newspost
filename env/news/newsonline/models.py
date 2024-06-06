@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from froala_editor.fields import FroalaField
 
 
 class BlogModel(models.Model):
