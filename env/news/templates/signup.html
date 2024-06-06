@@ -1,0 +1,34 @@
+{% extends 'bse.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+<h1>Login</h1>
+<br>
+<form method="POST" action = "{% url 'home' %}" >
+    {% csrf_token %}
+
+    <form>
+        <div class="mb-3">
+          <input type="text" class="form-control" name="first_name" placeholder="First Name" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" name="Last_name" placeholder="Last Name" required>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="mb-3">
+          <input type="password" class="form-control" name="password1" placeholder="Passoword" required>
+        </div>
+       
+        <div class="mb-3">
+            <input type="password" class="form-control" name="password2" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
+
+</form>
+
+
+</div>
